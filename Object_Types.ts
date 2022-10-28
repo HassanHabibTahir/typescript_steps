@@ -149,3 +149,30 @@ if (poem.type === "pages") {
 }
 poem.type; // Type: 'pages' | 'rhymes'
 // poem.pages;
+
+// Intersection Types
+
+type Artwork = {
+  genre: string;
+  name: string;
+};
+type Writing = {
+  pages: number;
+  name: string;
+};
+type WrittenArt = Artwork & Writing;
+// Equivalent to:
+// {
+// genre: string;
+// name: string;
+// pages: number;
+// }
+
+//Optional Parameters
+
+function announceSong(song: string, singer?: string) {
+  console.log(`Song: ${song}`);
+  if (singer) {
+    console.log(`Singer: ${singer}`);
+  }
+}
