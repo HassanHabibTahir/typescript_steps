@@ -133,3 +133,4 @@ function workWithUnsafeParam(param: unknown) {
   // Here, param is known to be type string
   param.toUpperCase(); // Ok
 }
+//
